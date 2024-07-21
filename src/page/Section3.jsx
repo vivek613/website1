@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Section3 = () => {
+    const [inputTab, setInputTab] = useState("Tab 1");
+
     return (
         <div className="splash-section">
             <div className="splash-container">
@@ -189,11 +191,14 @@ const Section3 = () => {
                                 data-w-tab="Tab 1"
                                 id="replica-api-input"
                                 tn="1"
-                                className="splash_comparison-menu-link w-inline-block w-tab-link w--current"
-                                href="#w-tabs-0-data-w-pane-0"
+                                className={`splash_comparison-menu-link w-inline-block w-tab-link ${inputTab === "Tab 1" && "w--current"}`}
+
                                 role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-0"
-                                aria-selected="true"
+                                aria-selected={inputTab === "Tab 1"}
+                                onClick={() => {
+                                    setInputTab("Tab 1");
+                                }}
                             >
                                 <div>Input</div>
                             </a>
@@ -201,12 +206,13 @@ const Section3 = () => {
                                 data-w-tab="Tab 2"
                                 id="replica-api-output"
                                 tn="2"
-                                className="splash_comparison-menu-link w-inline-block w-tab-link"
-                                tabIndex="-1"
-                                href="#w-tabs-0-data-w-pane-1"
+                                className={`splash_comparison-menu-link w-inline-block w-tab-link ${inputTab === "Tab 2" && "w--current"}`}
                                 role="tab"
                                 aria-controls="w-tabs-0-data-w-pane-1"
-                                aria-selected="false"
+                                aria-selected={inputTab === "Tab 2"}
+                                onClick={() => {
+                                    setInputTab("Tab 2");
+                                }}
                             >
                                 <div>Output</div>
                             </a>

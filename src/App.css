@@ -9952,6 +9952,7 @@ figcaption {
   margin-top: 1.5rem;
   padding: 0.5rem;
   display: flex;
+  z-index: 12;
 }
 
 .splash_comparison-menu-link {
