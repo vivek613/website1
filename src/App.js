@@ -11,7 +11,7 @@ import Section5 from './page/Section5';
 import Section6 from './page/Section6';
 import Section7 from './page/Section7';
 import Section8 from './page/Section8';
-import Section9 from './page/Section9';
+import Section9 from './components/Footer';
 import Section10 from './page/Section';
 
 
